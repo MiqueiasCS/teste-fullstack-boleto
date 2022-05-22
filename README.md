@@ -38,10 +38,26 @@ Existe apenas uma rota **GET**
 #### Endpoint - /boleto/linhaDigitavel
 - Exemplo de requisição: http://localhost:3000/boleto/26090017023033374448705800000001689610000002750
 - Response:
-  ```
+  ```js
+  //status 200
   {
     "barCode": "26096896100000027500017030333744480580000000",
     "amount": "27.50",
     "expirationDate": "2022-04-20"
   }
+  ```
+- Exemplo de response inválida
+  ```js
+   // status 400
+   
+   // exemplo 1
+    {
+      "error": "DV geral do codigo de barras inválido!"
+    }
+    
+   // exemplo 2
+    {
+      "error": "Os dígitos devem ser apenas números. Foi encontrado o seguinte dígito não numérico: @",
+      "identificador_informado": "12345678912312345678912312345678912312345678912@3"
+    }
   ```
