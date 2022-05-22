@@ -7,8 +7,8 @@ export const findBoleto = (req, res) => {
       ? getItemConvenio(req.boleto_num)
       : getItemTitulo(req.boleto_num);
 
-    res.status(200).json({ message: boleto });
+    res.status(200).json(boleto);
   } catch (e) {
-    return res.status(e.statusCode).json({ message: e.message });
+    return res.status(e.statusCode).json({ error: e.message });
   }
 };

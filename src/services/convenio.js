@@ -103,8 +103,6 @@ export const getItemConvenio = (identifier) => {
 
   let amount = getAmountConvenio(valor, valorRealOuReferencia);
 
-  console.log(barCode, barCode.length);
-
   let res = {
     barCode,
     amount,
@@ -112,5 +110,4 @@ export const getItemConvenio = (identifier) => {
   };
 
   return res;
-  // 816100000008688716052024002078002025001641079098
 };
