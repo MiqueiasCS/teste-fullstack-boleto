@@ -33,7 +33,9 @@ $ yarn test
 ```
 
 ## Rotas
-Existe apenas uma rota **GET**
+- Existe apenas uma rota **GET**
+- A linha digitavel não deve conter espaços
+- Devem ser digitados apenas números na linha digitavel
 
 #### Endpoint - /boleto/linhaDigitavel
 - Exemplo de requisição: http://localhost:3000/boleto/26090017023033374448705800000001689610000002750
